@@ -1,6 +1,6 @@
 # 客户端
 1. ```ApplicationContext  getBean```方法获取```RpcProxyClient```类
-2. ```RpcProxyClient```类反射获得需要调用的```servcie```，并把参数传进去
+2. ```RpcProxyClient```类动态代理获得需要调用的```servcie```，并把参数传进去
 3. ```RemoteInvocationHandler``` 会封装请求信息到```RpcRequest```，然后```RpcNetTransport```发起远程```socket```调用远程接口
 # 服务端
 1. ```GpRpcServer```类死循环 通过```ServerSocket```监听端口，接收请求。 此类实现```ApplicationContextAware, InitializingBean```
